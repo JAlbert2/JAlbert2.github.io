@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script>
+        document.addEventListener('contextmenu', function (event) {
+            if (event.target.tagName === 'IMG') {
+                event.preventDefault(); // Prevent the context menu from appearing
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <p>Photo Gallery</p>
+        <nav>
+            <ul>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#experience">Experience</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="static/Jonah Albert Resume.pdf" target="_blank">Resume</a></li>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <img src="static/photos/DCS3394.JPEG" alt="Description of Photo 1">
+                <img src="static/photos/DSC_1281.JPG" alt="Description of Photo 2">
+                <img src="static/photos/DSC_8706.jpeg" alt="Description of Photo 3">
+                <img src="static/photos/DSCN2966.JPG" alt="Description of Photo 4">
+                <img src="static/photos/IMG_0593.JPEG" alt="Description of Photo 5">
+                <img src="static/photos/IMG_3811.JPEG" alt="Description of Photo 6">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jonah Albert. All rights reserved.</p>
+    </footer>
+</body>
+</html>
