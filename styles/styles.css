@@ -69,14 +69,13 @@ footer {
     padding: 20px 0;
     background: #333;
     color: #fff;
-    position: relative;
 }
 
 footer p {
     margin: 0;
 }
 
-.skills-list {
+.skills-list, .list {
     columns: 2;
     -webkit-columns: 2;
     -moz-columns: 2;
@@ -85,29 +84,26 @@ footer p {
     padding-left: 1.5%;
 }
 
-.skills-list li {
-    margin-bottom: 10px;
-}
-
-.list {
-    padding-left: 0;
-    list-style-type: none;
-    padding-left: 1.5%;
-}
-
-.list li {
+.skills-list li, .list li {
     margin-bottom: 10px;
 }
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
     gap: 15px; /* Space between images */
     padding: 20px;
 }
 
+@media (max-width: 768px) { /* For mobile view */
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+    }
+}
+
 .gallery-grid img {
     width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     transition: transform 0.2s; /* Animation effect */
@@ -116,3 +112,4 @@ footer p {
 .gallery-grid img:hover {
     transform: scale(1.05); /* Slight zoom on hover */
 }
+
